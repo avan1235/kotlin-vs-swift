@@ -1,21 +1,17 @@
-import org.jetbrains.kotlin.gradle.tasks.KotlinCompile
-
 plugins {
     kotlin("jvm") version "1.8.21"
     application
 }
 
-group = "in.procyk"
-version = "1.0"
-
 repositories {
     mavenCentral()
 }
 
-tasks.withType<KotlinCompile> {
-    kotlinOptions.jvmTarget = "1.8"
+dependencies {
+    implementation("io.ktor:ktor-server-core-jvm:2.3.2")
+    implementation("io.ktor:ktor-server-netty-jvm:2.3.2")
 }
 
 application {
-    mainClass.set("HelloWorldKt")
+    mainClass.set("MainKt")
 }
