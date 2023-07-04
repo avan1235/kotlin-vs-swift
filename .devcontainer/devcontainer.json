@@ -1,0 +1,48 @@
+{
+	"name": "Swift JVM",
+	"build": {
+		"dockerfile": "Dockerfile"
+	},
+
+	// Set *default* container specific settings.json values on container create.
+	"settings": {
+		"html.format.templating": true,
+		"workbench.colorTheme": "Real IntelliJ Light",
+
+		"editor.scrollbar.verticalScrollbarSize": 10,
+		"editor.scrollbar.horizontalScrollbarSize": 10,
+		"editor.scrollbar.vertical": "visible",
+		"editor.scrollbar.horizontal": "visible",
+
+		"editor.fontFamily": "'JetBrains Mono'",
+		"editor.fontWeight": "500",
+		"editor.fontSize": 15,
+		"editor.letterSpacing": -0.2,
+		"editor.lineHeight": 1.25,
+
+		"workbench.tree.indent": 24,
+	},
+	
+	"extensions": [
+		"davidanson.vscode-markdownlint",
+		"ms-azuretools.vscode-docker",
+		"k--kato.intellij-idea-keybindings",
+		"percygrunwald.vscode-intellij-recent-files",
+		"c75.real-intellij-light",
+		"mhutchie.git-graph",
+		"streetsidesoftware.code-spell-checker",
+		"mathiasfrohlich.kotlin",
+		"kasik96.swift",
+	],
+
+	"forwardPorts": [
+	],
+
+	"remoteUser": "user",
+
+	"hostRequirements": {
+		"cpus": 2,
+		"memory": "4gb",
+		"storage": "32gb"
+	}	 
+}
