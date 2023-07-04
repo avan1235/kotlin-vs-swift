@@ -1,13 +1,11 @@
-import Vapor
+import BigInt
 
-let arguments = ["vapor", "serve", "--port", "1234"]
-let app = try Application(.detect(arguments: arguments))
-defer {
-    app.shutdown()
+func fib(n: Int, curr: Int, prev: Int) -> Int {
+    guard n > 0 else {
+        return curr
+    }
+    return fib(n: n - 1, curr: curr + prev, prev: curr)
 }
 
-app.get("") { req in
-    "Hello World!"
-}
 
-try app.run()
+print(fib(n: 10, curr: 1, prev: 0))

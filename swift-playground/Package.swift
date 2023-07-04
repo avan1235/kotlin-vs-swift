@@ -6,14 +6,14 @@ let package = Package(
         name: "swift-playground",
         dependencies: [
             .package(
-                    url: "https://github.com/vapor/vapor.git",
-                    branch: "main"),
+                    url: "https://github.com/attaswift/BigInt.git",
+                    from: "5.3.0"),
         ],
         targets: [
             .executableTarget(
                     name: "swift-playground",
                     dependencies: [
-                        .product(name: "Vapor", package: "vapor"),
+                        .product(name: "BigInt", package: "BigInt"),
                     ],
                     path: "Sources"),
         ]
