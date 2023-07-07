@@ -26,6 +26,7 @@ RUN sudo apt update  \
            libcurl4-openssl-dev \
            libedit2 \
            libgcc-11-dev \
+           libncurses6 \
            libpython3.11 \
            libsqlite3-0 \
            libstdc++-11-dev \
@@ -51,3 +52,5 @@ RUN cd /tmp && \
     wget https://corretto.aws/downloads/latest/amazon-corretto-17-x64-linux-jdk.deb && \
     sudo dpkg --install amazon-corretto-17-x64-linux-jdk.deb && \
     rm amazon-corretto-17-x64-linux-jdk.deb
+
+SHELL ["/bin/bash", "-c"] 
