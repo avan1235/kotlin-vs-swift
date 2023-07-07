@@ -53,4 +53,4 @@ RUN cd /tmp && \
     sudo dpkg --install amazon-corretto-17-x64-linux-jdk.deb && \
     rm amazon-corretto-17-x64-linux-jdk.deb
 
-SHELL ["/bin/bash", "-c"] 
+ENTRYPOINT [ "/usr/bin/bash" ]
