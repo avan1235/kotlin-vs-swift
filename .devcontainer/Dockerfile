@@ -52,7 +52,7 @@ ENV PATH="$PATH:/opt/swift/usr/bin"
 RUN cd /tmp && \
     git clone https://github.com/apple/swift-format.git && \
     cd swift-format && \
-    git checkout "tags/508.0.0" && \
+    git checkout "tags/508.0.1" && \
     swift build -c release && \
     sudo mv .build/release/swift-format /bin/ && \
     cd .. && \
