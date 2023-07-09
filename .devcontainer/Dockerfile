@@ -47,8 +47,7 @@ RUN cd /tmp && tar -xzf swift-5.8.1-RELEASE-ubuntu22.04.tar.gz && sudo mv swift-
 
 RUN echo "if [ -f /home/$USERNAME/.bashrc ]; then source /home/$USERNAME/.bashrc; fi" >> /home/$USERNAME/.bash_profile
 RUN echo "export PATH=$PATH:/opt/swift/usr/bin" >> /home/$USERNAME/.bashrc
-
-SHELL ["/bin/bash", "-c"]
+ENV PATH="$PATH:/opt/swift/usr/bin"
 
 RUN cd /tmp && \
     git clone https://github.com/apple/swift-format.git && \
@@ -63,7 +62,5 @@ RUN cd /tmp && \
     wget https://corretto.aws/downloads/latest/amazon-corretto-17-x64-linux-jdk.deb && \
     sudo dpkg --install amazon-corretto-17-x64-linux-jdk.deb && \
     rm amazon-corretto-17-x64-linux-jdk.deb
-
-SHELL ["/bin/sh", "-c"]
 
 ENTRYPOINT [ "/usr/bin/bash" ]
